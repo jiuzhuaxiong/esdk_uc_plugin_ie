@@ -1,0 +1,10 @@
+// dllmain.h : 模块类的声明。
+
+class CIECTDCTRLModule : public CAtlDllModuleT< CIECTDCTRLModule >
+{
+public :
+	DECLARE_LIBID(LIBID_IECTDCTRLLib)
+	DECLARE_REGISTRY_APPID_RESOURCEID(IDR_IECTDCTRL, "{4ADA840A-429A-4227-9D75-CCCC83E0C18A}")
+};
+
+extern class CIECTDCTRLModule _AtlModule;

@@ -1,0 +1,59 @@
+// IECTDCTRL.idl : IECTDCTRL 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(IECTDCTRL.tlb)和封送处理代码。
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(569259F4-86BE-44BB-A791-B03B244C0A8A),
+	dual,
+	nonextensible,
+	helpstring("ICTD 接口"),
+	pointer_default(unique)
+]
+interface ICTD : IDispatch{
+};
+[
+	object,
+	uuid(EA6BD917-D0BB-4BD1-BA2C-9C455601195C),
+	dual,
+	nonextensible,
+	helpstring("ITelFindBHO 接口"),
+	pointer_default(unique)
+]
+
+interface IMeetingCtrl : IDispatch{
+};
+
+
+[
+	uuid(6D21F88B-A274-4985-B8D1-E42E310BA45E),
+	version(1.0),
+	helpstring("IECTDCTRL 1.0 类型库")
+]
+library IECTDCTRLLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(53860B5A-4F81-4A10-B98A-3FD73DEB8877),
+		helpstring("CTD Class")
+	]
+	coclass CTD
+	{
+		[default] interface ICTD;
+	};
+	[
+		uuid(B60FFA75-7DFA-4CA7-AB1A-10AE2A177F32),
+		helpstring("MeetingCtrl Class")
+	]
+	coclass MeetingCtrl
+	{
+		[default] interface IMeetingCtrl;
+	};
+
+};

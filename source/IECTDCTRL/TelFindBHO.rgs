@@ -1,0 +1,26 @@
+HKCR
+{
+	IECTDCTRL.TelFindBHO.1 = s 'TelFindBHO Class'
+	{
+		CLSID = s '{CEF3FE5D-0864-46A4-8FDD-95DACE449BE7}'
+	}
+	IECTDCTRL.TelFindBHO = s 'TelFindBHO Class'
+	{
+		CLSID = s '{CEF3FE5D-0864-46A4-8FDD-95DACE449BE7}'
+		CurVer = s 'IECTDCTRL.TelFindBHO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CEF3FE5D-0864-46A4-8FDD-95DACE449BE7} = s 'TelFindBHO Class'
+		{
+			ProgID = s 'IECTDCTRL.TelFindBHO.1'
+			VersionIndependentProgID = s 'IECTDCTRL.TelFindBHO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{6D21F88B-A274-4985-B8D1-E42E310BA45E}'
+		}
+	}
+}
