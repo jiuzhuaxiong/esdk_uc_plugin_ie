@@ -1,5 +1,3 @@
-项目简介
-
 文档说明：
  1. Build自动生成脚本，可以生成vs2008的DLL库；
  2. com.huawei.ebg.esdk.ucsdk.client.control工程代码；
